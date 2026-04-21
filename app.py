@@ -423,7 +423,8 @@ def build_preview_html(cells: list, show_pagenum: bool) -> str:
   .card-cell {{
     background: #fffffe;
     min-height: 145px;
-    padding: 10px 12px 8px;
+    padding: 10px 12px 22px;
+    position: relative;
     display: flex;
     flex-direction: column;
     border: 1px solid #dedad3;
@@ -447,9 +448,9 @@ def build_preview_html(cells: list, show_pagenum: bool) -> str:
   .star {{ color: #c00; font-weight: bold; }}
   .cont {{ text-align: justify; padding-left: 2.4em; margin-bottom: 1px; }}
   .cell-num {{
-    margin-top: auto;
-    padding-top: 4px;
-    text-align: right;
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
     font-size: 8.5px;
     color: #aaa9a4;
     font-family: 'Helvetica Neue', Arial, sans-serif;
