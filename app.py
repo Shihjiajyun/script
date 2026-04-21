@@ -252,15 +252,12 @@ div[data-testid="stDownloadButton"] > button:active {
 """, unsafe_allow_html=True)
 
 # ─────────────────────────────────────────────────────────────────
-CLAUDE_PROMPT = """請幫我將以下司儀稿整理成 MD 格式，規則如下：
+CLAUDE_PROMPT = """請幫我將附件的司儀稿整理成 MD 格式，規則如下：
 - 用 ## 標記每個段落的標題
 - 每一段對話格式為「姓名：台詞內容」（全形冒號）
 - 同一位司儀的連續對話，如果太長請適當拆成多個「姓名：」段落，每段盡量不超過 100 字
 - 台詞中的 ★ 請保留
-- 空行用來分隔不同說話者
-
-以下是司儀稿內容：
-[請在這裡貼上你的司儀稿]"""
+- 空行用來分隔不同說話者"""
 
 # ── 標題 ─────────────────────────────────────────────────────────
 st.markdown("""
@@ -279,8 +276,11 @@ st.markdown(f"""
     <div class="step-body">
         <p class="step-title">整理稿子</p>
         <p class="step-desc">
-            前往 <a href="https://claude.ai" target="_blank">claude.ai</a>，
-            複製下方 Prompt，貼入後將司儀稿附在最後，讓 Claude 自動整理成 MD 格式。
+            前往以下任一 AI 網站，複製下方 Prompt 貼入，再<strong>以上傳檔案的方式</strong>把司儀稿直接上傳，讓 AI 自動整理成 MD 格式。<br>
+            用你習慣的就好 ——
+            <a href="https://claude.ai" target="_blank">Claude</a>、
+            <a href="https://chatgpt.com" target="_blank">ChatGPT</a>、
+            <a href="https://gemini.google.com" target="_blank">Gemini</a>
         </p>
         <div class="prompt-wrap">
             <p class="prompt-label">Prompt</p>
