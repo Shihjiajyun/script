@@ -504,6 +504,5 @@ if uploaded_file is not None:
 st.markdown("""
 <div class="site-footer">
     <a href="mailto:shihjiajyun@gmail.com">shihjiajyun@gmail.com</a>
-    <a href="https://github.com/Shihjiajyun/script" target="_blank">GitHub</a>
 </div>
 """, unsafe_allow_html=True)
